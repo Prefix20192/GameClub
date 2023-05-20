@@ -5,25 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Configuration;
+using System.Data.SqlClient;
 
 
 namespace GameClub
 {
     class DbClients
-    {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;";
-        public static OleDbConnection GetConnection()
+    {   
+        public static SqlConnection GetConnection()
         {
 
-            OleDbConnection con = new OleDbConnection(connectString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["base_main"].ConnectionString);
             try
             {
                 con.Open();
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error connection SQL");
+                MessageBox.Show("Error connection SQL\n Error: " + ex.Message);
             }
             return con;
         }
@@ -31,17 +31,15 @@ namespace GameClub
 
         public static void AddClient(Clients cl)
         {
-            string sql = "INSERT INTO [clients] (login_user, password, time, balance) VALUES (@log_u, @pass_u, @time_u, @balance_u)";
+            string sql = "INSERT INTO clients (login_user, password, time, balance) VALUES (@log_u, @pass_u, @time_u, @balance_u)";
 
-            OleDbConnection con = GetConnection();
-            OleDbCommand cmd = new OleDbCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
 
             cmd.Parameters.Add("log_u", SqlDbType.VarChar).Value = cl.Email;
             cmd.Parameters.Add("pass_u", SqlDbType.VarChar).Value = cl.password;
-            cmd.Parameters.Add("time_u", SqlDbType.VarChar).Value = cl.time;
-            cmd.Parameters.Add("balance_u", SqlDbType.VarChar).Value = cl.balance;
-
+            cmd.Parameters.Add("time_u", SqlDbType.Int).Value = cl.time;
+            cmd.Parameters.Add("balance_u", SqlDbType.Int).Value = cl.balance;
 
             try
             {
@@ -55,14 +53,15 @@ namespace GameClub
             con.Close();
         }  
         
-        public static void UpdateClient(Clients cl)
+        public static void UpdateClient(Clients cl, int id)
         {
             string sql = "UPDATE [clients] SET login_user = @log_u, password = @pass_u, time = @time_u, balance = @balance_u WHERE id = @client_id";
 
-            OleDbConnection con = GetConnection();
-            OleDbCommand cmd = new OleDbCommand(sql, con);
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
 
+            cmd.Parameters.Add("client_id", SqlDbType.Int).Value = id;
             cmd.Parameters.Add("log_u", SqlDbType.VarChar).Value = cl.Email;
             cmd.Parameters.Add("pass_u", SqlDbType.VarChar).Value = cl.password;
             cmd.Parameters.Add("time_u", SqlDbType.VarChar).Value = cl.time;
@@ -81,12 +80,17 @@ namespace GameClub
             con.Close();
         }
 
+        internal static void UpdateClient(Clients cl, string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void DeleteClient(string id)
         {
             string sql = "DELETE FROM [clients] WHERE id = @client_id";
 
-            OleDbConnection con = GetConnection();
-            OleDbCommand cmd = new OleDbCommand(sql, con);
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
 
             cmd.Parameters.Add("client_id", SqlDbType.VarChar).Value = id;
@@ -107,15 +111,15 @@ namespace GameClub
         public static void DisplayAndSearch(string query, DataGridView dvg)
         {
             string sql = query;
-            OleDbConnection con = GetConnection();
-            OleDbCommand cmd = new OleDbCommand(sql, con);
-            OleDbDataAdapter adp = new OleDbDataAdapter(cmd);
+            SqlConnection con = GetConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
+
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
             DataTable tbl = new DataTable();
 
             adp.Fill(tbl);
             dvg.DataSource = tbl;
             con.Close();
-
         }
 
     }

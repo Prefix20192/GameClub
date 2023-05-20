@@ -1,7 +1,6 @@
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\bin\Debug\GameClub.exe.config
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\bin\Debug\GameClub.exe
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\bin\Debug\GameClub.pdb
-C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.Form1.resources
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.Properties.Resources.resources
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.csproj.GenerateResource.cache
@@ -13,3 +12,5 @@ C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.admin_
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.client_settings_admin.resources
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.client_settings_admin_update.resources
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.client_settings.resources
+C:\Users\Admin\Documents\project_vs\game-club\GameClub\bin\Debug\Database.mdf
+C:\Users\Admin\Documents\project_vs\game-club\GameClub\bin\Debug\Database_log.ldf

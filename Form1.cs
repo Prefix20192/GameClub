@@ -7,21 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace GameClub
 {
     public partial class Form1 : Form
     {
 
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;";
+        public static string connectString = ConfigurationManager.ConnectionStrings["base_main"].ConnectionString;
 
-        private OleDbConnection myConnection;
+        private SqlConnection myConnection;
 
         public Form1()
         {
             InitializeComponent();
-            myConnection = new OleDbConnection(connectString);
+            myConnection = new SqlConnection(connectString);
 
             myConnection.Open();
         }
@@ -29,7 +30,6 @@ namespace GameClub
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
@@ -56,9 +56,9 @@ namespace GameClub
                 {
 
                     string sql_select = $"SELECT * FROM clients WHERE login_user = '{uname.Text}' AND password = '{password.Text}'";
-                    OleDbCommand command = new OleDbCommand(sql_select, myConnection);
+                    SqlCommand command = new SqlCommand(sql_select, myConnection);
 
-                    OleDbDataReader reader = command.ExecuteReader();
+                    SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
                         MessageBox.Show($"Добро пожаловать {uname.Text}");
@@ -70,6 +70,7 @@ namespace GameClub
                     }
                     else
                     {
+                        myConnection.Close();
                         MessageBox.Show("ERROR: Я вас не нашел в базе данных :(\nПроверьте правильность ввода данных!");
                     }
                 }

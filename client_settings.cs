@@ -7,20 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace GameClub
 {
     public partial class client_settings : Form
     {
 
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;";
+        public static string connectString = ConfigurationManager.ConnectionStrings["base_main"].ConnectionString;
 
-        private OleDbConnection myConnection;
+        private SqlConnection myConnection;
         public client_settings()
         {
             InitializeComponent();
-            myConnection = new OleDbConnection(connectString);
+            myConnection = new SqlConnection(connectString);
 
             myConnection.Open();
         }
@@ -35,7 +36,7 @@ namespace GameClub
         private void send_change_Click(object sender, EventArgs e)
         {
             string sql_select = $"UPDATE [clients] SET login_user = @l_u, password = @p_u WHERE login_user = '{DataBank.l_user}'";
-            OleDbCommand cmd = new OleDbCommand(sql_select, myConnection);
+            SqlCommand cmd = new SqlCommand(sql_select, myConnection);
 
             cmd.Parameters.AddWithValue("l_u", email_u.Text);
             cmd.Parameters.AddWithValue("p_u", password_u.Text);

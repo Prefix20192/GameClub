@@ -365,6 +365,7 @@ namespace GameClub
             this.button28.TabIndex = 59;
             this.button28.Text = "Играть";
             this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button29
             // 
@@ -376,6 +377,7 @@ namespace GameClub
             this.button29.TabIndex = 58;
             this.button29.Text = "Играть";
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button26
             // 
@@ -387,6 +389,7 @@ namespace GameClub
             this.button26.TabIndex = 57;
             this.button26.Text = "Играть";
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button27
             // 
@@ -398,6 +401,7 @@ namespace GameClub
             this.button27.TabIndex = 56;
             this.button27.Text = "Играть";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button8
             // 
@@ -409,6 +413,7 @@ namespace GameClub
             this.button8.TabIndex = 43;
             this.button8.Text = "Играть";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -420,6 +425,7 @@ namespace GameClub
             this.button9.TabIndex = 42;
             this.button9.Text = "Играть";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -442,6 +448,7 @@ namespace GameClub
             this.button11.TabIndex = 40;
             this.button11.Text = "Играть";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -453,6 +460,7 @@ namespace GameClub
             this.button12.TabIndex = 39;
             this.button12.Text = "Играть";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -464,6 +472,7 @@ namespace GameClub
             this.button13.TabIndex = 38;
             this.button13.Text = "Играть";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button7
             // 
@@ -475,6 +484,7 @@ namespace GameClub
             this.button7.TabIndex = 37;
             this.button7.Text = "Играть";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -486,6 +496,7 @@ namespace GameClub
             this.button6.TabIndex = 36;
             this.button6.Text = "Играть";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -497,6 +508,7 @@ namespace GameClub
             this.button5.TabIndex = 35;
             this.button5.Text = "Играть";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -508,6 +520,7 @@ namespace GameClub
             this.button4.TabIndex = 34;
             this.button4.Text = "Играть";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -519,6 +532,7 @@ namespace GameClub
             this.button3.TabIndex = 33;
             this.button3.Text = "Играть";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -530,6 +544,7 @@ namespace GameClub
             this.button2.TabIndex = 32;
             this.button2.Text = "Играть";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox36
             // 
@@ -733,6 +748,7 @@ namespace GameClub
             this.button32.TabIndex = 63;
             this.button32.Text = "Играть";
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Visible = false;
             // 
             // button33
             // 
@@ -744,6 +760,7 @@ namespace GameClub
             this.button33.TabIndex = 62;
             this.button33.Text = "Играть";
             this.button33.UseVisualStyleBackColor = true;
+            this.button33.Visible = false;
             // 
             // button30
             // 
@@ -755,6 +772,7 @@ namespace GameClub
             this.button30.TabIndex = 61;
             this.button30.Text = "Играть";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Visible = false;
             // 
             // button31
             // 
@@ -766,6 +784,7 @@ namespace GameClub
             this.button31.TabIndex = 60;
             this.button31.Text = "Играть";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Visible = false;
             // 
             // button20
             // 
@@ -777,6 +796,7 @@ namespace GameClub
             this.button20.TabIndex = 55;
             this.button20.Text = "Играть";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Visible = false;
             // 
             // button21
             // 
@@ -788,6 +808,7 @@ namespace GameClub
             this.button21.TabIndex = 54;
             this.button21.Text = "Играть";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Visible = false;
             // 
             // button22
             // 
@@ -799,6 +820,7 @@ namespace GameClub
             this.button22.TabIndex = 53;
             this.button22.Text = "Играть";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Visible = false;
             // 
             // button23
             // 
@@ -810,6 +832,7 @@ namespace GameClub
             this.button23.TabIndex = 52;
             this.button23.Text = "Играть";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Visible = false;
             // 
             // button24
             // 
@@ -821,6 +844,7 @@ namespace GameClub
             this.button24.TabIndex = 51;
             this.button24.Text = "Играть";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Visible = false;
             // 
             // button25
             // 
@@ -832,6 +856,7 @@ namespace GameClub
             this.button25.TabIndex = 50;
             this.button25.Text = "Играть";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Visible = false;
             // 
             // button14
             // 
@@ -843,6 +868,7 @@ namespace GameClub
             this.button14.TabIndex = 49;
             this.button14.Text = "Играть";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Visible = false;
             // 
             // button15
             // 
@@ -854,6 +880,7 @@ namespace GameClub
             this.button15.TabIndex = 48;
             this.button15.Text = "Играть";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Visible = false;
             // 
             // button16
             // 
@@ -865,6 +892,7 @@ namespace GameClub
             this.button16.TabIndex = 47;
             this.button16.Text = "Играть";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Visible = false;
             // 
             // button17
             // 
@@ -876,6 +904,7 @@ namespace GameClub
             this.button17.TabIndex = 46;
             this.button17.Text = "Играть";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Visible = false;
             // 
             // button18
             // 
@@ -887,6 +916,7 @@ namespace GameClub
             this.button18.TabIndex = 45;
             this.button18.Text = "Играть";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Visible = false;
             // 
             // button19
             // 
@@ -898,6 +928,7 @@ namespace GameClub
             this.button19.TabIndex = 44;
             this.button19.Text = "Играть";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Visible = false;
             // 
             // pictureBox34
             // 
@@ -908,6 +939,7 @@ namespace GameClub
             this.pictureBox34.Size = new System.Drawing.Size(111, 141);
             this.pictureBox34.TabIndex = 29;
             this.pictureBox34.TabStop = false;
+            this.pictureBox34.Visible = false;
             // 
             // pictureBox33
             // 
@@ -918,6 +950,7 @@ namespace GameClub
             this.pictureBox33.Size = new System.Drawing.Size(111, 141);
             this.pictureBox33.TabIndex = 28;
             this.pictureBox33.TabStop = false;
+            this.pictureBox33.Visible = false;
             // 
             // pictureBox30
             // 
@@ -928,6 +961,7 @@ namespace GameClub
             this.pictureBox30.Size = new System.Drawing.Size(111, 141);
             this.pictureBox30.TabIndex = 27;
             this.pictureBox30.TabStop = false;
+            this.pictureBox30.Visible = false;
             // 
             // pictureBox31
             // 
@@ -938,6 +972,7 @@ namespace GameClub
             this.pictureBox31.Size = new System.Drawing.Size(111, 141);
             this.pictureBox31.TabIndex = 26;
             this.pictureBox31.TabStop = false;
+            this.pictureBox31.Visible = false;
             // 
             // pictureBox32
             // 
@@ -948,6 +983,7 @@ namespace GameClub
             this.pictureBox32.Size = new System.Drawing.Size(111, 141);
             this.pictureBox32.TabIndex = 25;
             this.pictureBox32.TabStop = false;
+            this.pictureBox32.Visible = false;
             // 
             // pictureBox27
             // 
@@ -958,6 +994,7 @@ namespace GameClub
             this.pictureBox27.Size = new System.Drawing.Size(111, 141);
             this.pictureBox27.TabIndex = 24;
             this.pictureBox27.TabStop = false;
+            this.pictureBox27.Visible = false;
             // 
             // pictureBox28
             // 
@@ -968,6 +1005,7 @@ namespace GameClub
             this.pictureBox28.Size = new System.Drawing.Size(111, 141);
             this.pictureBox28.TabIndex = 23;
             this.pictureBox28.TabStop = false;
+            this.pictureBox28.Visible = false;
             // 
             // pictureBox29
             // 
@@ -978,6 +1016,7 @@ namespace GameClub
             this.pictureBox29.Size = new System.Drawing.Size(111, 141);
             this.pictureBox29.TabIndex = 22;
             this.pictureBox29.TabStop = false;
+            this.pictureBox29.Visible = false;
             // 
             // pictureBox17
             // 
@@ -988,6 +1027,7 @@ namespace GameClub
             this.pictureBox17.Size = new System.Drawing.Size(111, 141);
             this.pictureBox17.TabIndex = 15;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Visible = false;
             // 
             // pictureBox18
             // 
@@ -998,6 +1038,7 @@ namespace GameClub
             this.pictureBox18.Size = new System.Drawing.Size(111, 141);
             this.pictureBox18.TabIndex = 14;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Visible = false;
             // 
             // pictureBox19
             // 
@@ -1008,6 +1049,7 @@ namespace GameClub
             this.pictureBox19.Size = new System.Drawing.Size(111, 141);
             this.pictureBox19.TabIndex = 13;
             this.pictureBox19.TabStop = false;
+            this.pictureBox19.Visible = false;
             // 
             // pictureBox20
             // 
@@ -1018,6 +1060,7 @@ namespace GameClub
             this.pictureBox20.Size = new System.Drawing.Size(111, 141);
             this.pictureBox20.TabIndex = 12;
             this.pictureBox20.TabStop = false;
+            this.pictureBox20.Visible = false;
             // 
             // pictureBox13
             // 
@@ -1028,6 +1071,7 @@ namespace GameClub
             this.pictureBox13.Size = new System.Drawing.Size(111, 141);
             this.pictureBox13.TabIndex = 11;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Visible = false;
             // 
             // pictureBox14
             // 
@@ -1038,6 +1082,7 @@ namespace GameClub
             this.pictureBox14.Size = new System.Drawing.Size(111, 141);
             this.pictureBox14.TabIndex = 10;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Visible = false;
             // 
             // pictureBox15
             // 
@@ -1048,6 +1093,7 @@ namespace GameClub
             this.pictureBox15.Size = new System.Drawing.Size(111, 141);
             this.pictureBox15.TabIndex = 9;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Visible = false;
             // 
             // pictureBox16
             // 
@@ -1058,6 +1104,7 @@ namespace GameClub
             this.pictureBox16.Size = new System.Drawing.Size(111, 141);
             this.pictureBox16.TabIndex = 8;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Visible = false;
             // 
             // timer1
             // 

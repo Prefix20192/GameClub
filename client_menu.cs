@@ -7,20 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace GameClub
 {
     public partial class client_menu : Form
     {
 
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database.mdb;";
+        public static string connectString = ConfigurationManager.ConnectionStrings["base_main"].ConnectionString;
 
-        private OleDbConnection myConnection;
+        private SqlConnection myConnection;
         public client_menu()
         {
             InitializeComponent();
-            myConnection = new OleDbConnection(connectString);
+            myConnection = new SqlConnection(connectString);
 
             myConnection.Open();
             listcollection.Clear();
@@ -34,7 +36,6 @@ namespace GameClub
 
         private void client_menu_Load(object sender, EventArgs e)
         {
-            this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
@@ -42,9 +43,9 @@ namespace GameClub
 
             user_name.Text = DataBank.l_user;
             string sql_select = $"SELECT * FROM clients WHERE login_user = '{DataBank.l_user}'";
-            OleDbCommand command = new OleDbCommand(sql_select, myConnection);
+            SqlCommand command = new SqlCommand(sql_select, myConnection);
 
-            OleDbDataReader reader = command.ExecuteReader();
+            SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
                 time.Text = reader["time"].ToString();
@@ -107,6 +108,81 @@ namespace GameClub
             //Выключение компьютера
             //Process.Start("shutdown","/s /t 0");
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://yandex.com/");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("cmd.exe");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Тут приложение .exe");
         }
     }
 }
