@@ -55,7 +55,7 @@ namespace GameClub
                 else
                 {
 
-                    string sql_select = $"SELECT * FROM clients WHERE login_user = '{uname.Text}' AND password = '{password.Text}'";
+                    string sql_select = $"SELECT * FROM clients WHERE login_user = '{uname.Text}'";
                     SqlCommand command = new SqlCommand(sql_select, myConnection);
 
                     SqlDataReader reader = command.ExecuteReader();
@@ -67,11 +67,13 @@ namespace GameClub
                         client_menu client_menu_form = new client_menu();
                         this.Hide();
                         client_menu_form.Show();
+                        reader.Close();
                     }
                     else
                     {
                         myConnection.Close();
                         MessageBox.Show("ERROR: Я вас не нашел в базе данных :(\nПроверьте правильность ввода данных!");
+                        reader.Close();
                     }
                 }
             }

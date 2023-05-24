@@ -98,7 +98,6 @@ namespace GameClub
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             client_settings client_settings_form = new client_settings();
-            this.Hide();
             client_settings_form.Show();
         }
 
