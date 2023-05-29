@@ -29,7 +29,7 @@ namespace GameClub
             foreach(string str in list_game.Items)
             {
                 listcollection.Add(str);
-                //search.CharacterCasing = CharacterCasing.Lower;
+         
             }
         }
 

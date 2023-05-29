@@ -14,3 +14,4 @@ C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.client
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.client_settings.resources
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\bin\Debug\Database.mdf
 C:\Users\Admin\Documents\project_vs\game-club\GameClub\bin\Debug\Database_log.ldf
+C:\Users\Admin\Documents\project_vs\game-club\GameClub\obj\Debug\GameClub.csproj.AssemblyReference.cache
