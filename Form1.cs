@@ -61,6 +61,7 @@ namespace GameClub
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
+
                         MessageBox.Show($"Добро пожаловать {uname.Text}");
                         DataBank.l_user = uname.Text;
                         DataBank.p_user = password.Text;
