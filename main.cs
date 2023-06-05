@@ -41,6 +41,7 @@ namespace GameClub
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
+                    DataBank.l_user = txtEmail.Text;
                     client_menu client_menu_form = new client_menu();
                     this.Hide();
                     client_menu_form.Show();
