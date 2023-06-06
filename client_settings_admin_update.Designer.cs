@@ -64,9 +64,9 @@ namespace GameClub
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(112, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 31);
+            this.label1.Size = new System.Drawing.Size(230, 39);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Клиент: БЛАБЛА";
+            this.label1.Text = "Клиент: ФИО";
             // 
             // pictureBox1
             // 
@@ -83,7 +83,7 @@ namespace GameClub
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(124, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(39, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email";
             // 
@@ -92,7 +92,7 @@ namespace GameClub
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(124, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Пароль";
             // 
@@ -101,7 +101,7 @@ namespace GameClub
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(124, 211);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(49, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Баланс";
             // 
@@ -110,7 +110,7 @@ namespace GameClub
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(124, 257);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.Size = new System.Drawing.Size(45, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Время";
             // 
@@ -119,7 +119,7 @@ namespace GameClub
             this.client_balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.client_balance.Location = new System.Drawing.Point(127, 227);
             this.client_balance.Name = "client_balance";
-            this.client_balance.Size = new System.Drawing.Size(190, 26);
+            this.client_balance.Size = new System.Drawing.Size(190, 30);
             this.client_balance.TabIndex = 5;
             // 
             // client_password
@@ -127,7 +127,7 @@ namespace GameClub
             this.client_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.client_password.Location = new System.Drawing.Point(127, 181);
             this.client_password.Name = "client_password";
-            this.client_password.Size = new System.Drawing.Size(190, 26);
+            this.client_password.Size = new System.Drawing.Size(190, 30);
             this.client_password.TabIndex = 6;
             // 
             // client_email
@@ -135,7 +135,7 @@ namespace GameClub
             this.client_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.client_email.Location = new System.Drawing.Point(127, 133);
             this.client_email.Name = "client_email";
-            this.client_email.Size = new System.Drawing.Size(190, 26);
+            this.client_email.Size = new System.Drawing.Size(190, 30);
             this.client_email.TabIndex = 7;
             // 
             // client_time
@@ -143,7 +143,7 @@ namespace GameClub
             this.client_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.client_time.Location = new System.Drawing.Point(127, 273);
             this.client_time.Name = "client_time";
-            this.client_time.Size = new System.Drawing.Size(190, 26);
+            this.client_time.Size = new System.Drawing.Size(190, 30);
             this.client_time.TabIndex = 8;
             // 
             // button1

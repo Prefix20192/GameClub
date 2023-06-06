@@ -53,7 +53,7 @@ namespace GameClub
             con.Close();
         }  
         
-        public static void UpdateClient(Clients cl, int id)
+        public static void UpdateClient(Clients cl, string id)
         {
             string sql = "UPDATE [clients] SET login_user = @log_u, password = @pass_u, time = @time_u, balance = @balance_u WHERE id = @client_id";
 
@@ -61,12 +61,11 @@ namespace GameClub
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
 
-            cmd.Parameters.Add("client_id", SqlDbType.Int).Value = id;
-            cmd.Parameters.Add("log_u", SqlDbType.VarChar).Value = cl.Email;
-            cmd.Parameters.Add("pass_u", SqlDbType.VarChar).Value = cl.password;
-            cmd.Parameters.Add("time_u", SqlDbType.VarChar).Value = cl.time;
-            cmd.Parameters.Add("balance_u", SqlDbType.VarChar).Value = cl.balance;
-
+            cmd.Parameters.AddWithValue("@client_id", id);
+            cmd.Parameters.AddWithValue("@log_u", cl.Email);
+            cmd.Parameters.AddWithValue("@pass_u", cl.password);
+            cmd.Parameters.AddWithValue("@time_u", cl.time);
+            cmd.Parameters.AddWithValue("@balance_u", cl.balance);
 
             try
             {
@@ -79,12 +78,6 @@ namespace GameClub
             }
             con.Close();
         }
-
-        internal static void UpdateClient(Clients cl, string id)
-        {
-            throw new NotImplementedException();
-        }
-
         public static void DeleteClient(string id)
         {
             string sql = "DELETE FROM [clients] WHERE id = @client_id";

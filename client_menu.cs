@@ -103,10 +103,10 @@ namespace GameClub
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            MessageBox.Show("Ваше время закончилось\nВыключаю компьютер!", "Время закончилось");
+            //MessageBox.Show("Ваше время закончилось\nВыключаю компьютер!", "Время закончилось");
             //Выключение компьютера
             //Process.Start("shutdown","/s /t 0");
-            this.Close();
+            //this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
